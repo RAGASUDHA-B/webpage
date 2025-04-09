@@ -1,7 +1,5 @@
-// Wait for the page to load
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Search functionality
     const searchInput = document.getElementById("search-input");
     const searchButton = document.getElementById("search-button");
     const blogCards = document.querySelectorAll(".blog-card");
@@ -18,8 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-
-    // Click event to show event details
+    
     blogCards.forEach(card => {
         card.addEventListener("click", function () {
             let title = card.querySelector("h2").textContent;
@@ -27,8 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
             alert(`Event: ${title}\n\n${description}`);
         });
     });
-
-    // Dark mode toggle
     const darkModeButton = document.createElement("button");
     darkModeButton.textContent = "Toggle Dark Mode";
     darkModeButton.id = "dark-mode-toggle";
