@@ -6,6 +6,10 @@
 
 body{
     position: relative;  /*box position */
+    background-color: #c7B8EA;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
 
 }
 /*global css*/
@@ -15,7 +19,7 @@ body{
 }
 
 nav{
-    background-color: #4f1973; /* event background color */
+    background-color: #21438977; /* event background color */
     box-shadow: 0 7px 10px rgba(0,0,0,0.3);/* shaddow*/
 }
 .navbar{
@@ -30,6 +34,17 @@ nav{
     letter-spacing: 2px;
     font-size: 2.8rem;
 }
+.menu{
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 2.8rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
 #search-input{
     max-width: 400px;
     padding: 10px 20px;
@@ -37,6 +52,7 @@ nav{
     border-radius: 5px;
     font-size: 18px;
     color: #333;
+    float:none
 }
  #search-button{
      padding: 10px 20px;
@@ -44,11 +60,27 @@ nav{
      color: #fff;
      border: none;
      font-size: 18px;
-     cursor: pointer;
+     cursor: pointer; 
      border-radius: 5px;
      margin-left: 10px;
+     float:none;
 
  }
+ .search-container img {
+   float: right;}
+ #login{
+  padding: 10px 20px;
+  background-color: #bd48eb;
+  color:#fff;
+  border: none;
+  font-size: medium;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left:10px;
+  float: none;
+ }
+ 
+ 
   #blog-container{
     padding: 3rem 0;
     display: flex; /*for keep the imageas side by side*/
@@ -67,8 +99,11 @@ nav{
     padding: 1rem;
     margin: 1px;
     display: flex;
-    gap: 40px;
-    grid-template-columns: repeat(3, 1fr);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /*gap: 40px;
+    grid-template-columns: repeat(3, 1fr);*/
    
   }
   .blog-card:hover{
@@ -79,14 +114,15 @@ nav{
   .blog-card img{
     width: 100%;
     height: 280px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 5px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    background-color: #23608613;
    
   }
 
   .blog-card h2{
-    color:#141414;
+    color: rgb(77, 83, 200);
     font-size: 1.7rem;
     font-weight: 500;
   }
@@ -97,7 +133,7 @@ nav{
 
   }
 
-  @media(max-width: 500px){
+  @media(max-width: 768px){
     nav {
       padding: 0 20px;
     }
@@ -110,5 +146,53 @@ nav{
     }
     .blog-card{
       width: 100%;
+      margin: 1rem 0;
     }
+  }
+    .dark-mode {
+      background-color: #1a1a1a;
+      color: white;
+    }
+  
+    .dark-mode nav {
+      background-color: #333;
+    }
+  
+    .dark-mode .blog-card {
+      background-color: #262626;
+      border: 1px solid #444;
+      color: white;
+    }
+    ul{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #13509758;
+    }
+
+    li{
+      float: left;
+    }
+
+    li a{
+      display: block;
+      color: rgba(0, 0, 0, 0.658);
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover{
+      background-color: #8895f354;
+    }
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
   }
